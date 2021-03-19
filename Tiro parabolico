@@ -1,3 +1,6 @@
+#Integrantes de equipo
+#Ruben y Diego
+# Documento realizado 19 marzo
 
 from random import randrange
 from turtle import *
