@@ -1,15 +1,20 @@
 #Integrantes de equipo
-#Ruben y Diego
-# Documento realizado 19 marzo
+#Ruben Enrique Hernandez Martinez - A01246584
+#Diego Agustin Chuc Espinoza - A00830859
+# Documento realizado 19 marzo de 2021
 
+
+#Importacion de modulos
 from random import randrange
 from turtle import *
 from freegames import vector
 
+#Creacion de elementos
 ball = vector(-200, -200)
 speed = vector(0, 0)
 targets = []
 
+#Funcion para generar los disparos con los clicks del mouse
 def tap(x, y):
     "Respond to screen tap."
     if not inside(ball):
@@ -25,6 +30,7 @@ def inside(xy):
     "Return True if xy within screen."
     return -200 < xy.x < 200 and -200 < xy.y < 200
 
+#Genera los elementos
 def draw():
     "Draw ball and targets."
     clear()
@@ -39,6 +45,7 @@ def draw():
 
     update()
 
+#Define el movimiento de la pelota roja.
 def move():
     "Move ball and targets."
     if randrange(40) == 0:
@@ -61,7 +68,7 @@ def move():
             targets.append(target)
 
     draw()
-
+#Cambios para cuando los circulos se cambien de la pantalla
     for target in targets:
         if not inside(target):
             target.x = 300
@@ -71,6 +78,7 @@ def move():
 # en que se producia cada uno
     ontimer(move, 5)
 
+#Configuracion de la pantalla y cambios finales
 setup(420, 420, 370, 0)
 hideturtle()
 up()
