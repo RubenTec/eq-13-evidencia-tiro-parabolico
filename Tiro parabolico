@@ -5,17 +5,17 @@
 # Documento realizado 19 marzo de 2021
 
 
-#Importacion de modulos
+#Importacion de modulos del juego
 from random import randrange
 from turtle import *
 from freegames import vector
 
-#Creacion de elementos
+#Creacion de elementos visuales
 ball = vector(-200, -200)
 speed = vector(0, 0)
 targets = []
 
-#Funcion para generar los disparos con los clicks del mouse
+#Función para generar los disparos con los clicks del mouse
 def tap(x, y):
     "Respond to screen tap."
     if not inside(ball):
@@ -23,7 +23,7 @@ def tap(x, y):
         ball.y = -199
 
 #Para aumentar la velocidad del proyectil simplemente se 
-#disminuyo el numero por el que estaba dividida 
+#disminuyo el numero por el que estaba dividida a 10 
         speed.x = (x + 200)/10
         speed.y = (y + 200)/10
 
@@ -78,10 +78,10 @@ def move():
             target.y = 300
 
 # Para aumentar la velocidad de los valores se disminuyo el tiempo
-# en que se producia cada uno
+# en que se producia cada uno 
     ontimer(move, 5)
 
-#Configuracion de la pantalla y cambios finales
+#Configuracion de la pantalla y ultimos toques
 setup(420, 420, 370, 0)
 hideturtle()
 up()
