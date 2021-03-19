@@ -16,6 +16,8 @@ def tap(x, y):
         ball.x = -199
         ball.y = -199
 
+#Para aumentar la velocidad del proyectil simplemente se 
+#disminuyo el numero por el que estaba dividida 
         speed.x = (x + 200)/10
         speed.y = (y + 200)/10
 
@@ -65,7 +67,9 @@ def move():
             target.x = 300
             target.y = 300
 
-    ontimer(move, 50)
+# Para aumentar la velocidad de los valores se disminuyo el tiempo
+# en que se producia cada uno
+    ontimer(move, 5)
 
 setup(420, 420, 370, 0)
 hideturtle()
