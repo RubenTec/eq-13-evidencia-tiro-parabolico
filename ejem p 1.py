@@ -11,7 +11,8 @@ def tap(x, y):
     if not inside(ball):
         ball.x = -199
         ball.y = -199
-        
+
+# Se cambio el valor de la division en la velocidad pasando de 25 a 10
         speed.x = (x + 200)/10
         speed.y = (y + 200)/10
 
@@ -60,7 +61,7 @@ def move():
         if not inside(target):
             return
 
-    ontimer(move,5)
+    ontimer(move,50)
 
 setup(420, 420, 370, 0)
 hideturtle()
@@ -69,3 +70,4 @@ tracer(False)
 onscreenclick(tap)
 move()
 done()
+
