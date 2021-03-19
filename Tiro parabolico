@@ -1,6 +1,7 @@
 #Integrantes de equipo
 #Ruben Enrique Hernandez Martinez - A01246584
 #Diego Agustin Chuc Espinoza - A00830859
+#Edwin Enrique Urbáez Rodríguez - A00828361
 # Documento realizado 19 marzo de 2021
 
 
@@ -59,9 +60,11 @@ def move():
     if inside(ball):
         speed.y -= 0.35
         ball.move(speed)
+# Aquí se borran los targuets de la primera ronda
 
     dupe = targets.copy()
     targets.clear()
+
 
     for target in dupe:
         if abs(target - ball) > 13:
